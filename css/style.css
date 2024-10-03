@@ -1,0 +1,758 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0c0c0c;
+  color: white;
+}
+
+/* Navigation Styles */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 95%;
+  background: rgba(0, 0, 0, 0.1); /* Initially transparent */
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  z-index: 100;
+}
+
+
+#navbar.scrolled {
+  background: rgba(0, 0, 0, 0.5); /* Becomes more opaque on scroll */
+  border-radius: 20px; /* Curved edges */
+  padding-top: 20px;
+  padding: 15px 40px; /* Adds padding for more space on left and right */
+  margin: 0 20px; /* Adds margin equally to the left and right */
+  width: calc(100% - 40px); /* Adjust the width to account for margins */
+  box-sizing: border-box; /* Ensures padding and margins are included in the width calculation */
+  transition: background 0.3s ease, margin 0.3s ease, width 0.3s ease; /* Smooth transition */
+}
+
+
+
+
+.nav-links {
+  flex-grow: 1; /* Gives the nav-links some flexibility in the middle */
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Ensures space between logo and icons */
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; /* Makes sure padding and border are included in the total width */
+  overflow: visible; /* Ensure nothing is hidden */
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.logo {
+  flex-grow: 0; /* Keeps the logo from expanding too much */
+}
+
+
+
+.icons {
+  flex-grow: 0; /* Prevents the icons from being pushed off */
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase; /* This will capitalize all letters */
+}
+
+
+/* Icons section in the navigation bar */
+
+.icons {
+  display: flex;
+  gap: 20px; /* This ensures there's space between the icons */
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 30px; /* Adds some margin on the right to prevent overflow */
+  flex-grow: 0; /* Ensures the icons container doesn't take up unnecessary space */
+  overflow: visible; /* Makes sure nothing is hidden */
+}
+
+
+.icons i {
+  color: white; /* Icons in white */
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icons i:hover {
+  transform: scale(1.1); /* Adds hover effect */
+}
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('https://valuableresourcesonline.com/wp-content/uploads/2024/09/kpbHero2.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* This ensures the background image stays fixed */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Larger font size for h1 */
+  font-weight: 700; /* Bold font */
+  line-height: 0.9; /* Adjusts line height for readability */
+  margin-bottom: 20px;
+  
+}
+
+.hero-content p {
+  font-size: 1rem; /* Larger font size for h1 */
+  font-weight: 300; /* Bold font */
+  line-height: 1.5; /* Adjusts line height for readability */
+  margin-bottom: 20px;
+  
+}
+
+.hero-content .ampersand {
+  font-size: 6rem; /* Larger font size for the ampersand */
+  font-weight: 500; /* Lighter font weight for the ampersand */
+  display: inline-block;
+  vertical-align: middle; /* Aligns the ampersand with the text */
+  margin: 0 10px; /* Adds space around the ampersand */
+}
+
+.cta-button {
+  padding: 10px 30px;
+  background-color: #ff3366;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+/*
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+
+/* Section 2: Our Story */
+.story-section {
+  display: flex;
+  height: 100vh; /* Ensure full height for section */
+  padding: 0; /* No padding between sections */
+  margin: 0; /* Remove margins between sections */
+}
+
+.story-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.story-image {
+  flex: 1;
+  overflow: hidden; /* To ensure the image fills its container */
+}
+
+.story-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensures the image covers the full height */
+}
+
+.story-text {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0c0c0c; /* Matches the theme */
+  color: white;
+}
+
+.story-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Remove spacing between sections */
+.hero, .story-section {
+  margin-bottom: 0;
+}
+
+/* Service Section */
+.services-section {
+  padding: 80px 50px;
+}
+
+/* Carousel Section */
+.carousel-section {
+  padding: 50px;
+}
+
+/* Testimonial Section */
+.testimonials-section {
+  padding: 80px 50px;
+}
+
+/* Contact Form */
+.contact-section {
+  padding: 80px 50px;
+}
+
+
+.logo img {
+  max-height: 50px; /* Adjust the height based on your preference */
+  width: auto; /* Ensures the aspect ratio is maintained */
+  cursor: pointer; /* Makes the logo clickable */
+  transition: transform 0.3s ease; /* Adds a hover effect */
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Slightly enlarges the logo when hovered */
+}
+
+/* Section 2: Our Story */
+.story-section {
+  display: flex;
+  height: 100vh; /* Ensure full height for section */
+  padding: 0; /* No padding between sections */
+  margin: 0; /* Remove margins between sections */
+}
+
+.story-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.story-image {
+  flex: 1;
+  overflow: hidden; /* To ensure the image fills its container */
+}
+
+.story-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensures the image covers the full height */
+}
+
+.story-text {
+  flex: 1.2; /* Widen the text section */
+  padding: 40px; /* Slightly reduce padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0c0c0c; /* Matches the theme */
+  color: white;
+}
+
+.story-text h1 {
+  font-size: 2.5rem; /* Slightly reduce the heading size */
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  font-size: 1.1rem; /* Reduced font size */
+  line-height: 1.6; /* Slightly reduced line height */
+  margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+
+
+
+/* Section 3: Our Services */
+.services-section {
+  position: relative;
+  padding: 80px 50px;
+  text-align: center;
+  color: white;
+ background-image: url('https://valuableresourcesonline.com/wp-content/uploads/2024/09/kpbHero2.png'); 
+  /* background-color: #562e34; */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed on scroll */
+  min-height: 100vh; /* Ensures the section is at least 100% of the viewport height */
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay with 60% opacity */
+  z-index: 1; /* Overlay sits above the background */
+}
+
+.services-section h2, .services-carousel {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.services-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.service-item {
+  position: relative;
+  min-width: 300px;
+  height: 400px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.service-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+}
+
+.service-item:hover img {
+  filter: blur(4px); /* Blur effect on hover */
+}
+
+.service-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.service-item:hover .overlay {
+  opacity: 1; /* Text appears on hover */
+}
+
+.service-item .overlay p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* Add a thin line at the bottom of Section 3 */
+.services-section {
+  padding: 80px 50px;
+  text-align: center;
+  background-color: #0c0c0c; /* Matches overall theme */
+  color: white;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333; /* Thin line at the bottom */
+}
+
+
+/* Section 4: About Section (Reversed Layout) */
+.about-section {
+  display: flex;
+  height: 100vh; /* Full height for section */
+  padding: 0;
+  margin: 0;
+  
+  background-color: #0c0c0c; /* Dark background to match theme  */
+  color: white;
+  border-bottom: 1px solid #333; /* Thin line at the bottom background-color: #562e34 #0c0c0c */
+}
+
+.about-container {
+  display: flex;
+  width: 100%;
+  ;
+}
+
+.about-text {
+  flex: 1.2; /* Text section takes up more space */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0c0c0c; /* Matches the theme  #562e34*/
+}
+
+.about-text h1 {
+  font-size: 2.5rem; /* Adjust size as needed */
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem; /* Slightly smaller font */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1;
+  overflow: hidden;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full height */
+}
+
+
+/* Section 6: Testimonials */
+.testimonials-section {
+  padding: 80px 50px;
+  text-align: center;
+  background-color: #0c0c0c; /* Matches the theme */
+  color: white;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #333; /* Thin line at the bottom */
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Carousel container for testimonials */
+.testimonials-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+/* Testimonial blocks */
+.testimonial-item {
+  position: relative;
+  min-width: 300px;
+  max-width: 350px;
+  height: 250px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Glow effect on hover */
+.testimonial-item:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glow effect */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Testimonial text */
+.testimonial-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Testimonial author and title */
+.testimonial-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ff3366; /* Highlighting the author's name */
+}
+
+.testimonial-item p:last-child {
+  font-size: 0.9rem;
+  color: #bbb; /* Lighter color for the author's title */
+}
+
+
+/* Section 7: Contact Form */
+.contact-section {
+  padding: 80px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0c0c; /* Dark theme to match the website */
+  color: white;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  width: 100%;
+}
+
+.contact-text h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Form Layout */
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+}
+
+textarea {
+  height: 150px; /* Larger text box for the message */
+}
+
+.contact-button {
+  padding: 15px 30px;
+  background-color: #ff3366;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.contact-button:hover {
+  background-color: #e62e5b; /* Darker color on hover */
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border: 2px solid #ff3366; /* Focus state */
+}
+
+/* Footer Section */
+/* Footer Section */
+.footer {
+  background-color: #0c0c0c;
+  color: #bbb;
+  padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #333; /* Thin line at the bottom */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Left: Copyright Text */
+.footer-left p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Center: Social Media Icons */
+.footer-center {
+  text-align: center;
+}
+
+.footer-center h4 {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #bbb;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff3366;
+}
+
+/* Right: Newsletter Signup */
+.footer-right {
+  text-align: right;
+}
+
+.footer-right h4 {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.newsletter-signup {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-signup input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 70%;
+}
+
+.newsletter-signup button {
+  background-color: #ff3366;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter-signup button i {
+  font-size: 1rem;
+}
+
+.newsletter-signup button:hover {
+  background-color: #e62e5b;
+}
+
+/* Payment Icons */
+.payment-icons img {
+  width: 100%;
+  max-width: 250px;
+  margin-top: 10px;
+}
+
+/* Navigation Menu (above the footer elements) */
+.footer-menu {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #ff3366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .newsletter-signup input {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
